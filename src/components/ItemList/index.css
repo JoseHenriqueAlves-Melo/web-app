@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animes-list {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  list-style: none;
+  grid-gap: 1.5rem;
+}
+
+.animes-list img {
+  max-width: 100%;
+}
+
+.button-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: space-between;
+}
+
+.button-actions button {
+  padding: 5px;
+  margin: 5px 0px 5px 0px;
+}
