@@ -4,11 +4,11 @@ import './index.css'
 
 const ItemList = ({ info }) => {
   const dispatch = useDispatch();
-  function favorited( info ) {
+  function favorited( anime ) {
     console.log(info)
     return {
       type: 'FAVORITE_ANIME',
-      payload: info,
+      payload: anime,
     };
   }
   return (
@@ -25,7 +25,7 @@ const ItemList = ({ info }) => {
                 {anime.attributes.ageRatingGuide}
               </p>
               <div className="button-actions">
-                <button onClick={() => dispatch(favorited(info))}>Favoritar</button>
+                <button onClick={() => dispatch(favorited(anime))}>Favoritar</button>
               </div>
             </li>
           ))}

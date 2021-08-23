@@ -3,13 +3,13 @@ import { useSelector } from 'react-redux';
 
 
 const Favorites = () => {
-    const { data } = useSelector(state => state)
-    console.log(data)
+    const { newValue } = useSelector(state => state.favoriteReducer)
+    console.log(newValue)
     return (
         <>
         <h1>Favorites</h1>
-        {data?.map(favorited => (
-            <h2>{favorited.canonicalTitle}</h2>
+        {newValue?.map(favorited => (
+            <h2 key={favorited.id}>{favorited.attributes.canonicalTitle}</h2>
         ))}
         </>
         )

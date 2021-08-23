@@ -7,7 +7,7 @@ const initialState = {
       case 'FAVORITE_ANIME':
         return {
           ...state,
-          newValue: action.payload.data
+          newValue: [...state.newValue, action.payload],
         };
       default:
         return state;
